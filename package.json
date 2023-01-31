@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "zip": "rm sparticuzTest.zip && zip -r sparticuzTest.zip ./ ",
-    "sendToLambda": "npm run zip && aws s3 cp sparticuzTest.zip s3://aegis-lambda-deployment-bucket && aws lambda update-function-code --function-name aegis-scrapping-test --s3-bucket aegis-lambda-deployment-bucket --s3-key sparticuzTest.zip && rm sparticuzTest.zip"
+    "sendToLambda": "npm run zip && aws s3 cp sparticuzTest.zip s3://aegis-lambda-deployment-bucket && aws lambda update-function-code --function-name aegis-scrapping-test --s3-bucket aegis-lambda-deployment-bucket --s3-key sparticuzTest.zip && rm sparticuzTest.zip",
+    "start":"node src/index.js"
   },
   "keywords": [],
   "author": "",
